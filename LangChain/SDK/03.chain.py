@@ -1,10 +1,7 @@
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SimpleSequentialChain
-from langchain.agents import create_csv_agent
-from langchain.agents import load_tools
-from langchain.agents import initialize_agent
-from langchain.agents import AgentType
+from langchain.agents import (create_csv_agent, load_tools, initialize_agent, AgentType)
 
 
 # 使用 LLMChain 生成回复
@@ -36,7 +33,7 @@ def use_langchain_chain():
 def use_langchain_agent():
     agent = create_csv_agent(OpenAI(temperature=0), './data.csv', verbose=True)
     agent.run("一共有多少行数据?")
-    agent.run("统计年龄最大的名称写入到当前文档目录<最高成绩.txt>")
+    agent.run("打印一下第一行数据")
 
 
 # 使用 Agent 获取天气
@@ -44,10 +41,10 @@ def use_langchain_agent_weather():
     llm = OpenAI(temperature=0)
     tools = load_tools(["serpapi"], llm=llm)
     agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
-    agent.run("明天在北京穿什么衣服合适?")
+    agent.run("天津有什么好玩儿的地方?")
 
 
 if __name__ == '__main__':
     # use_langchain_chain()
-    use_langchain_agent()
-    # use_langchain_agent_weather()
+    # use_langchain_agent()
+    use_langchain_agent_weather()
