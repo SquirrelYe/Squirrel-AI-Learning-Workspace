@@ -53,7 +53,7 @@ def get_token_consumption():
     llm = OpenAI(model_name="text-davinci-002", n=2, best_of=2)
     with get_openai_callback() as cb:
         result = llm("Tell me a joke")
-        print(cb.total_tokens)
+        print(cb)
         print(result)
         # Tokens Used: 42
         #         Prompt Tokens: 4

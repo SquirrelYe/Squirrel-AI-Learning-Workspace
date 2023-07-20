@@ -2,6 +2,7 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SimpleSequentialChain
 from langchain.agents import (create_csv_agent, load_tools, initialize_agent, AgentType)
+from langchain.callbacks import (get_openai_callback)
 
 
 # 使用 LLMChain 生成回复
@@ -31,9 +32,12 @@ def use_langchain_chain():
 
 # 使用 Agent 生成回复
 def use_langchain_agent():
-    agent = create_csv_agent(OpenAI(temperature=0), './data.csv', verbose=True)
-    agent.run("一共有多少行数据?")
-    agent.run("打印一下第一行数据")
+    with get_openai_callback() as cb:
+        agent = create_csv_agent(OpenAI(temperature=0), './data.csv', verbose=True)
+        agent.run("一共有多少行数据?")
+        agent.run("打印一下第一行数据")
+        agent.run("将得到的数据保存到文件 ./result.txt 中。")
+        print(cb)
 
 
 # 使用 Agent 获取天气
@@ -44,7 +48,16 @@ def use_langchain_agent_weather():
     agent.run("天津有什么好玩儿的地方?")
 
 
+# 使用 Agent 执行Shell命令
+def use_langchain_agent_shell():
+    llm = OpenAI(temperature=0)
+    tools = load_tools(["shell"], llm=llm)
+    agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
+    agent.run("ls -l")
+
+
 if __name__ == '__main__':
     # use_langchain_chain()
-    # use_langchain_agent()
-    use_langchain_agent_weather()
+    use_langchain_agent()
+    # use_langchain_agent_weather()
+    # use_langchain_agent_shell()

@@ -13,3 +13,7 @@ run-prompt:
 run-chain:
 	@echo "Run chain..."
 	@python3 ./03.chain.py
+
+run-memory:
+	@echo "Run memory..."
+	@python3 ./04.memory.py

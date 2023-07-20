@@ -1,5 +1,6 @@
 from langchain import PromptTemplate, FewShotPromptTemplate
 from langchain.llms import OpenAI
+from langchain.callbacks import (get_openai_callback)
 
 
 # 🍉 Prompt 包含如下几个概念：
@@ -13,9 +14,16 @@ def generate_prompt_template():
         input_variables=["lastname"],
         template=template,
     )
+
     prompt_text = prompt.format(lastname="王")  # result: 我的邻居姓王，他生了个儿子，给他儿子起个名字
     llm = OpenAI(temperature=0.9)  # 调用OpenAI
-    print(llm(prompt_text))
+    result = llm(prompt_text)
+    print(result)
+
+    with get_openai_callback() as cb:
+        result = llm("Tell me a joke")
+        print(cb)
+        print(result)
 
 
 def generate_prompt_template_few_shot():
@@ -54,5 +62,5 @@ def generate_prompt_template_few_shot():
 
 
 if __name__ == '__main__':
-    # generate_prompt_template()
-    generate_prompt_template_few_shot()
+    generate_prompt_template()
+    # generate_prompt_template_few_shot()
