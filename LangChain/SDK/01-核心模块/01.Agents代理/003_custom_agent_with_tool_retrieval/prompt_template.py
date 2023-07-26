@@ -67,11 +67,6 @@ class CustomPromptTemplate(StringPromptTemplate):
         return template
 
 
-CustomPromptInstance = CustomPromptTemplate(
-    template=template,
-    tools_getter=tool_retriever.get_tools,
-    # 这省略了`agent_scratchpad`，`tools`和`tool_names`变量，因为这些变量是动态生成的
-    # 这包括`intermediate_steps`变量，因为这是必需的
-    input_variables=["input", "intermediate_steps"]
-    #
-)
+# 这省略了`agent_scratchpad`，`tools`和`tool_names`变量，因为这些变量是动态生成的
+# 这包括`intermediate_steps`变量，因为这是必需的
+CustomPromptInstance = CustomPromptTemplate(template=template, tools_getter=tool_retriever.get_tools, input_variables=["input", "intermediate_steps"])

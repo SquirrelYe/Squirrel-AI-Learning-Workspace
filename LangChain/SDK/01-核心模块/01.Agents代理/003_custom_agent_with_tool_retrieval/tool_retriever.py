@@ -21,6 +21,10 @@ docs = [Document(page_content=t.description, metadata={"index": i}) for i, t in 
 vector_store = FAISS.from_documents(docs, OpenAIEmbeddings())
 retriever = vector_store.as_retriever()
 
+# 测试搜索前十个和输入查询最相关的内容
+top10SimilarityVal = vector_store.search(query="whats the weather?", search_type="similarity", k=10)
+print("Top 10 Similarity Value ->", top10SimilarityVal)
+
 
 # 根据传递的查询获取最相关的工具
 def get_tools(query):
