@@ -35,7 +35,8 @@ class CustomPromptTemplate(StringPromptTemplate):
         print("CustomPromptTemplate ->", kwargs)
         # {'input': '深圳今天的天气怎么样?', 'intermediate_steps': []}
         # {'input': '深圳今天的天气怎么样?', 'intermediate_steps': [
-        #       (AgentAction(
+        #       (
+        #           AgentAction(
         #               tool='Search',
         #               tool_input='Shenzhen weather',
         #               log='Thought: I need to find out what the weather is like in Shenzhen today.\nAction: Search\nAction Input: Shenzhen weather'
