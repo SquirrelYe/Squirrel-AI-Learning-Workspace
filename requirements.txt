@@ -3,3 +3,5 @@ langsmith
 openai
 chromadb
 tiktoken
+faiss-cpu
+nltk
