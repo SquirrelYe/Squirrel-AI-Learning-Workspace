@@ -5,3 +5,5 @@ chromadb
 tiktoken
 faiss-cpu
 nltk
+wikipedia
+google-search-results
