@@ -1,0 +1,77 @@
+{
+  "errno": 0,
+  "errmsg": "",
+  "data": {
+    "count": 12,
+    "rows": [
+      {
+        "id": 10061,
+        "title_id": "5",
+        "title_region_id": "d_5_812179_dev",
+        "server_name": "vs-smoke",
+        "status": "Deployed Successfully",
+        "is_enabled": "TRUE",
+        "description": "for dev test",
+        "resource_type": "SourceCode",
+        "resource_method": "LocalFileUpload",
+        "resource_path": "pgos-images.tencentcloudcr.com/pgos_test_knative_image/d_5_812179_dev-1687865734230-vs-smoke",
+        "resource_version": "1687866823941",
+        "resource_destination": {
+          "resource_outer_file_key": "virtual_server/d_5_812179_dev/sourcecode/1687866825005_vs-smoke.zip",
+          "resource_outer_image_path": "",
+          "resource_outer_file_bucket": "pgosp-apgz-1300342678",
+          "resource_outer_file_region": "ap-guangzhou",
+          "resource_outer_file_location": "pgosp-apgz-1300342678.cos.ap-guangzhou.myqcloud.com/virtual_server/d_5_812179_dev/sourcecode/1687866825005_vs-smoke.zip",
+          "resource_outer_image_version": ""
+        },
+        "resource_deploy_logs": null,
+        "resource_limitation": {
+          "cpu_max_cfg": "0.5",
+          "cpu_min_cfg": "0.5",
+          "mem_max_cfg": "256MiB",
+          "mem_min_cfg": "256MiB"
+        },
+        "min_instances": null,
+        "max_instances": 2,
+        "listen_port": 8082,
+        "env_vars": [
+          {
+            "key": "TitleID",
+            "value": "5"
+          },
+          {
+            "key": "ServerKey",
+            "value": "11NL-0P2R-IVUI-O6SX-AOBA"
+          },
+          {
+            "key": "ServerPort",
+            "value": "8082"
+          }
+        ],
+        "is_block_client_req": "FALSE",
+        "createdAt": "2023-06-27 11:35:34",
+        "updatedAt": "2023-07-10 08:35:04",
+        "extension_virtual_server_deploy_queues": [
+          {
+            "id": 11651,
+            "title_id": "5",
+            "title_region_id": "d_5_812179_dev",
+            "server_id": 10061,
+            "server_name": "vs-smoke",
+            "task_id": 1,
+            "type": "DeployVirtualServerWithSourceCode",
+            "module_name": "Validate Parameters",
+            "status": "Successfully",
+            "message": "Validate Request Parameter Successfully, parameter is: \t{\"title_id\":\"5\",\"title_region_id\":\"d_5_812179_dev\",\"operator\":\"sogood\",\"server_id\":10061,\"server_name\":\"vs-smoke\",\"resource_path\":\"pgos-images.tencentcloudcr.com/pgos_test_knative_image/d_5_812179_dev-1687865734230-vs-smoke\",\"resource_version\":\"1687866823941\",\"resource_destination\":{\"resource_outer_file_bucket\":\"pgosp-apgz-1300342678\",\"resource_outer_file_key\":\"virtual_server/d_5_812179_dev/sourcecode/1687866825005_vs-smoke.zip\",\"resource_outer_file_region\":\"ap-guangzhou\",\"resource_outer_file_location\":\"pgosp-apgz-1300342678.cos.ap-guangzhou.myqcloud.com/virtual_server/d_5_812179_dev/sourcecode/1687866825005_vs-smoke.zip\"},\"resource_operate_knative_type\":1,\"resource_operate_knative_params\":{\"server_name\":\"vs-smoke\",\"image_info\":\"pgos-images.tencentcloudcr.com/pgos_test_knative_image/d_5_812179_dev-1687865734230-vs-smoke:1687866823941\",\"cpu_min_cfg\":\"0.5\",\"mem_min_cfg\":\"256MiB\",\"cpu_max_cfg\":\"0.5\",\"mem_max_cfg\":\"256MiB\",\"max_instances\":2,\"listen_port\":8082,\"env_vars\":{\"ServerKey\":\"11NL-0P2R-IVUI-O6SX-AOBA\",\"ServerPort\":\"8082\",\"TitleID\":\"5\"}}}\n",
+            "createdAt": "2023-06-27 11:53:45",
+            "updatedAt": "2023-06-27 11:53:45"
+          }
+        ],
+        "active_instances": 1,
+        "ready": true,
+        "reason": ""
+      }
+    ]
+  },
+  "pgosrid": "kXh0x"
+}
