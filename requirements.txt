@@ -4,7 +4,6 @@ openai
 chromadb # 用于存储数据
 faiss-cpu
 nltk
-tiktoken
 wikipedia # 维基百科
 google-search-results # 搜索引擎
 
@@ -16,3 +15,8 @@ pypdf # 用于处理pdf
 pypdfium2 # 用于处理pdf，PyPDFium2LoaderDemo
 pymupdf # 用于处理pdf，PyMuPDFLoader
 pdfplumber # 用于处理pdf，PDFPlumberLoader
+
+# 文档转换器使用
+tiktoken # 分词器
+spacy # 分词器
+nltk # 分词器
