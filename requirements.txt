@@ -1,9 +1,12 @@
 langchain
 langsmith
 openai
-chromadb # 用于存储数据
-faiss-cpu
-nltk
+
+# 向量数据库相关
+chromadb # 用于存储向量
+faiss-cpu # 用于存储向量
+
+# 数据来源
 wikipedia # 维基百科
 google-search-results # 搜索引擎
 
