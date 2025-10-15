@@ -1,0 +1,43 @@
+{
+  "name": "mcp-client-toolkit",
+  "version": "1.0.0",
+  "description": "A basic MCP (Model Context Protocol) client with concurrent server support",
+  "keywords": [
+    "mcp",
+    "client",
+    "protocol",
+    "concurrent"
+  ],
+  "license": "MIT",
+  "author": "CodeBuddy",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'Build not required for this project'",
+    "connect": "node examples/connect-real-servers.js",
+    "dev": "nodemon src/index.js",
+    "example": "node examples/basic-usage.js",
+    "example:advanced": "node examples/advanced-usage.js",
+    "example:real": "node examples/real-mcp-usage.js",
+    "example:sse": "node examples/sse-usage.js",
+    "example:streamable": "node examples/streamable-http-example.js",
+    "lint": "echo 'Linting not configured yet'",
+    "start": "node src/index.js",
+    "test": "node tests/test.js",
+    "test:all": "node tests/test_all.js",
+    "test:sse": "node tests/test_sse.js",
+    "test:stdio": "node tests/test_stdio.js",
+    "test:streamable": "node tests/test_streamable_http.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.5",
+    "axios": "^1.11.0",
+    "eventsource": "4.0.0",
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
