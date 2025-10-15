@@ -14,7 +14,9 @@
   "dependencies": {
     "typescript": "^5.0.4",
     "ts-node": "^10.9.1",
-    "openai": "^3.2.1"
+    "openai": "^5.20.0",
+    "winston": "3.17.0",
+    "fast-xml-parser": "^5.2.5"
   },
   "devDependencies": {
     "@types/node": "^18"

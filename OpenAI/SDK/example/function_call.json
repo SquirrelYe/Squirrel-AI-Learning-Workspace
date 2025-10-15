@@ -1,0 +1,43 @@
+{
+  "id": "gen-1757407281-QeioFMKnxHAFrGh6fkRD",
+  "provider": "Novita",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "object": "chat.completion",
+  "created": 1757407281,
+  "choices": [
+    {
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "native_finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "index": 0,
+            "id": "call_BF4GuWQl7wnAgGfgPHkbJAx6",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"location\": \"\\u5317\\u4eac\", \"unit\": \"celsius\"}"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "system_fingerprint": "",
+  "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 30,
+    "total_tokens": 466,
+    "prompt_tokens_details": {
+      "cached_tokens": 32,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": null
+  }
+}

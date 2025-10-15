@@ -1,0 +1,26 @@
+{
+  "id": "gen-1757407641-gSu5xtuxo5mCZo0lbIFW",
+  "provider": "Fireworks",
+  "model": "deepseek/deepseek-chat-v3-0324",
+  "object": "chat.completion",
+  "created": 1757407641,
+  "choices": [
+    {
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "你好！我是一个智能助手，旨在帮助你解答问题、提供信息和完成任务。我可以在多个领域为你提供帮助，例如：\n\n1. **知识问答**：无论是科学、历史、技术还是日常生活的问题，我都可以为你提供解答。\n2. **实用工具**：比如查询天气、计算、翻译、提供建议等。\n3. **创意支持**：协助写作、头脑风暴、生成想法或建议。\n4. **学习辅导**：帮助理解复杂概念、解答作业问题或提供学习资源。\n\n我基于先进的语言模型技术构建，能够理解和生成自然语言，努力提供准确且有用的信息。如果你有任何需要，随时告诉我！",
+        "refusal": null,
+        "reasoning": null
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 168,
+    "completion_tokens": 134,
+    "total_tokens": 302
+  }
+}

@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from 'openai';
+import { OpenAI } from 'openai';
 import { OpenAIConfiguration } from '../configuration';
 
 /**
@@ -6,11 +6,10 @@ import { OpenAIConfiguration } from '../configuration';
  * @author willye
  * @time 2023.05.19 17:05:35
  */
-const configuration = new Configuration({
+const openaiInstance = new OpenAI({
   organization: OpenAIConfiguration.OPENAI_Organization_ID,
-  apiKey: OpenAIConfiguration.OPENAI_API_KEY
+  apiKey: OpenAIConfiguration.OPENAI_API_KEY,
+  baseURL: OpenAIConfiguration.OPENAI_BASE_URL
 });
-
-const openaiInstance = new OpenAIApi(configuration);
 
 export { openaiInstance };

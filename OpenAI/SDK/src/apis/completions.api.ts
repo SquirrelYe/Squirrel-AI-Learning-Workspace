@@ -1,4 +1,4 @@
-import { OpenAIApi } from 'openai';
+import { OpenAI } from 'openai';
 
 /**
  * @description OpenAI Competions API 模型接口
@@ -6,12 +6,12 @@ import { OpenAIApi } from 'openai';
  * @time 2023.05.21 19:03:42
  */
 export class OpenAICompetionAPI {
-  constructor(private openaiInstance: OpenAIApi) {}
+  constructor(private openaiInstance: OpenAI) {}
 
   // OpenAI createCompletion 创建文本补全
   public createCompletion = async () => {
-    const result = await this.openaiInstance.createCompletion({
-      model: 'text-davinci-003',
+    const result = await this.openaiInstance.completions.create({
+      model: 'deepseek/deepseek-r1-0528',
       prompt: 'Say this is a test',
       max_tokens: 7,
       temperature: 0,
